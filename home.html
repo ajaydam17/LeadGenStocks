@@ -1,0 +1,60 @@
+<head>
+	<style>
+		body {
+		background-color: rgb(108, 201, 108);
+		}
+
+		h1 {
+		color: olive;
+		font-family: Consolas;
+		font-weight: bold;
+		}
+		p {
+		color: darkgreen;
+		font-size: 120%;
+		font-weight: bold;
+		}
+
+		.log {
+			color: grey;
+		}
+		button {
+			color: white;
+			background-color: black;
+		}
+	</style>
+	<script src=
+	"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script>
+		function logMood(element) {
+			var dt = new Date();
+			var utcDate = dt.toUTCString();
+			var ip;
+			$.getJSON("https://api.ipify.org?format=json", function(data) { ip = data.ip; }).then(response => 
+			{
+				var log = '{"message": "User clicked' + element.id + '", "time": "'+utcDate+'", "ip":' + ip;
+				$.ajax({
+					url: "http://localhost:8080/",
+					data: log,
+					type: "POST",
+					dataType: "data",
+					success: function(data){
+						console.log("Over");
+					},
+					error: function(err){
+						console.log(err);
+					}
+				});
+			});
+		}
+	</script>
+</head>
+<body>
+	<h1>What company are you intrested in?</h1>
+	<p>Click any one of the following buttons</p>
+	<button type="button" onclick="logMood(this)" id="Company 1"> Company 1 </button>
+	<button type="button" onclick="logMood(this)" id="Company 2"> Company 2 </button>
+	<button type="button" onclick="logMood(this)" id="Company 3"> Company 3 </button>
+	<button type="button" onclick="logMood(this)" id="Company 4"> Company 4 </button>
+</body>
