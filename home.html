@@ -1,13 +1,33 @@
 <head>
 	<style>
 		body {
-		background-color: rgb(108, 201, 108);
+			background-image: url('data/home_bg.jpg');
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
 		}
-
+		div.top-content{
+			position: relative;
+			margin-left: 30%;
+			margin-right: 30%;
+			margin-top: 5%;
+  			border: 3px black;
+			background-color: rgba(5, 5, 5, 0.4);
+			padding: 7;
+			border-radius: 20px;
+		}
+		div.side-note{
+			position:relative;
+			text-align: center;
+			font-family: Consolas;
+			color: black;
+			font-size: 120%;
+			font-weight: bold;
+		}
 		h1 {
-		color: olive;
-		font-family: Consolas;
-		font-weight: bold;
+			color: white;
+			font-family: Consolas;
+			font-weight: bold;
+			text-align: center;
 		}
 		p {
 		color: darkgreen;
@@ -21,40 +41,54 @@
 		button {
 			color: white;
 			background-color: black;
+			border-radius: 10px;
+			font-family: Consolas;
+			padding: 50 50 150 50;
+			margin-left: 20;
+			margin-right: 20;
+		}
+		div.button-container {
+			position: relative;
+			padding: 50;
+			text-align: center;
 		}
 	</style>
-	<script src=
-	"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
-		function logMood(element) {
+		function recordNav(element) {
 			var dt = new Date();
 			var utcDate = dt.toUTCString();
 			var ip;
-			$.getJSON("https://api.ipify.org?format=json", function(data) { ip = data.ip; }).then(response => 
-			{
-				var log = '{"message": "User clicked' + element.id + '", "time": "'+utcDate+'", "ip":' + ip;
-				$.ajax({
-					url: "http://localhost:8080/",
-					data: log,
-					type: "POST",
-					dataType: "data",
-					success: function(data){
-						console.log("Over");
-					},
-					error: function(err){
-						console.log(err);
-					}
-				});
+			var done = false;
+			var log = '{"message": "Click ' + element.id + '", "time": "'+utcDate+'", ';
+			
+			$.ajax({
+				url: "http://localhost:8080/",
+				data: log,
+				type: "POST",
+				dataType: "data",
+				success: function(data){
+					window.location.href = "http://localhost:8080/content?company="+element.id;
+					done=true;	
+				},
+				error: function(err){
+					console.log(err);
+				}
 			});
+			window.location.href = "http://localhost:8080/content?company="+element.id;
+			
 		}
 	</script>
 </head>
 <body>
-	<h1>What company are you intrested in?</h1>
-	<p>Click any one of the following buttons</p>
-	<button type="button" onclick="logMood(this)" id="Company 1"> Company 1 </button>
-	<button type="button" onclick="logMood(this)" id="Company 2"> Company 2 </button>
-	<button type="button" onclick="logMood(this)" id="Company 3"> Company 3 </button>
-	<button type="button" onclick="logMood(this)" id="Company 4"> Company 4 </button>
+	<div class="top-content">
+		<h1>Company profile</h1>
+	</div>
+	<div id="del" class="side-note">Choose the company you are intrested in</div>
+	<div class="button-container">
+		<button type="button" onclick="recordNav(this)" id="Company 1"> Company 1 </button>
+		<button type="button" onclick="recordNav(this)" id="Company 2"> Company 2 </button>
+		<button type="button" onclick="recordNav(this)" id="Company 3"> Company 3 </button>
+		<button type="button" onclick="recordNav(this)" id="Company 4"> Company 4 </button>
+	</div>
 </body>

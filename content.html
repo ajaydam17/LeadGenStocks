@@ -1,0 +1,108 @@
+<head>
+    <style>
+        body {
+            background-image: url('data/home_bg.jpg');
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+        }
+        button {
+			color: white;
+            background-color: black;
+			border-radius: 10px;
+            padding: 10;
+			font-family: Consolas;
+			
+		}
+        #left {
+            float: left;
+            background-color: rgba(5, 5, 5, 0.4);
+            width: 45%;
+            margin-right: 10;
+            margin-left: 10;
+            height: 100%;
+            border-radius: 100px;
+        }
+        #right {
+            float: right;
+            background-color: rgba(5, 5, 5, 0.4);
+            width: 45%;
+            margin-right: 10;
+            margin-left: 10;
+            height: 100%;
+            border-radius: 100px;
+        }
+        #title {
+            margin-top: 20;
+            text-align: center;
+            color: white;
+            font-family: Consolas;
+			font-weight: bold;
+            font-size: 40;
+        }
+        #basicinfo {
+            color:white;
+            margin: 50;
+            text-align: center;
+        }
+        #form {
+            padding: 100;
+            color: white;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function recordCommit(element) {
+            var dt = new Date();
+			var utcDate = dt.toUTCString();
+			var ip;
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var mail = document.getElementById("mail").value;
+            var phone = document.getElementById("phone").value;
+
+			var log = '{"message": {"fname": "'+ fname +'", "lanme": "'+ lname + '", "mail": "'+
+                mail + '", "phone": "'+ phone + '", "company": "'+ para.get("company") + '"}, '
+                + '"time": "'+utcDate+'", ';
+
+            $.ajax({
+                url: "http://localhost:8080/",
+                data: log,
+                type: "POST",
+                dataType: "data",
+                success: function(data){
+                    console.log("Navigation + Logging Success");
+                },
+                error: function(err){
+                    console.log(err);
+                }
+            })
+            window.location.href = "http://localhost:8080/";
+        }
+    </script>
+</head>
+<body>
+    <div id="left">
+        <div id="title">.</div>
+        <div id="basicinfo">(info about company)</div>
+    </div>
+    <div id="right">
+        <div id="form">
+            Give your details<br><br><br><br>
+            <label for="fname">First name:&emsp;</label>
+            <input type="text" id="fname"><br><br><br><br>
+            <label for="lname">Last name:&emsp;</label>
+            <input type="text" id="lname"><br><br><br><br>
+            <label for="mail">Mail id:&emsp;&emsp; </label>
+            <input type="text" id="mail"><br><br><br><br>
+            <label for="phone">Phone number:&emsp;</label>
+            <input type="text" id="phone"><br><br><br><br>
+            <button onclick="recordCommit(this)">Submit</button>
+        </div>
+    </div>
+
+    
+    <script>
+        var para = new URLSearchParams(window.location.search);
+        document.getElementById("title").innerHTML = para.get("company");
+    </script>
+</body>

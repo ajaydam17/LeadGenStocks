@@ -1,0 +1,9 @@
+{"message": "GET /", "time": "Tue, 24 Aug 2021 14:16:38 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "iZqkAxXUZ_su3JETSGHDTkOdxIL7Ljel"}
+{"message": "GET /content?company=Company 2", "time": "Tue, 24 Aug 2021 14:16:42 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "iZqkAxXUZ_su3JETSGHDTkOdxIL7Ljel"}
+{"message": "Click Company 2", "time": "Tue, 24 Aug 2021 14:16:42 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "iZqkAxXUZ_su3JETSGHDTkOdxIL7Ljel"}
+{"message": "GET /", "time": "Tue, 24 Aug 2021 14:16:49 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "iZqkAxXUZ_su3JETSGHDTkOdxIL7Ljel"}
+{"message": {"fname": "Joel", "lanme": "Antony Xaviour", "mail": "joeloffbeat@gmail.com", "phone": "09952017635", "company": "Company 2"}, "time": "Tue, 24 Aug 2021 14:16:48 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "iZqkAxXUZ_su3JETSGHDTkOdxIL7Ljel"}
+{"message": "GET /content?company=Company 3", "time": "Tue, 24 Aug 2021 14:17:07 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "iZqkAxXUZ_su3JETSGHDTkOdxIL7Ljel"}
+{"message": "Click Company 3", "time": "Tue, 24 Aug 2021 14:17:07 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "iZqkAxXUZ_su3JETSGHDTkOdxIL7Ljel"}
+{"message": {"fname": "Joel", "lanme": "Antony Xaviour", "mail": "joeloffbeat@gmail.com", "phone": "09952017635", "company": "Company 3"}, "time": "Tue, 24 Aug 2021 14:17:10 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "iZqkAxXUZ_su3JETSGHDTkOdxIL7Ljel"}
+{"message": "GET /", "time": "Tue, 24 Aug 2021 14:17:10 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "iZqkAxXUZ_su3JETSGHDTkOdxIL7Ljel"}
