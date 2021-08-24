@@ -7,3 +7,14 @@
 {"message": "Click Company 3", "time": "Tue, 24 Aug 2021 14:20:25 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "0Oe6vfG1iFOA6Pc5HMBk4sFvV45EjKxy"}
 {"message": {"fname": "Joel", "lanme": "Antony Xaviour", "mail": "xxxxt@gmail.com", "phone": "2142353", "company": "Company 3"}, "time": "Tue, 24 Aug 2021 14:20:35 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "0Oe6vfG1iFOA6Pc5HMBk4sFvV45EjKxy"}
 {"message": "GET /", "time": "Tue, 24 Aug 2021 14:20:36 GMT", "ip": "59.99.135.13", "country": "India", "city": "Nagercoil", "session": "0Oe6vfG1iFOA6Pc5HMBk4sFvV45EjKxy"}
+{"message": "GET /", "time": "Tue, 24 Aug 2021 16:31:05 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
+{"message": "GET /content?company=Company 1", "time": "Tue, 24 Aug 2021 16:31:07 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
+{"message": "Click Company 1", "time": "Tue, 24 Aug 2021 16:31:06 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
+{"message": "Click Company 2", "time": "Tue, 24 Aug 2021 16:31:08 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
+{"message": "GET /content?company=Company 2", "time": "Tue, 24 Aug 2021 16:31:09 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
+{"message": "GET /content?company=Company 4", "time": "Tue, 24 Aug 2021 16:31:27 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
+{"message": "Click Company 4", "time": "Tue, 24 Aug 2021 16:31:20 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
+{"message": {"fname": "Ajay", "lanme": "Dam", "mail": "ajay@gmail.com", "phone": "998989898", "company": "Company 4"}, "time": "Tue, 24 Aug 2021 16:31:33 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
+{"message": "GET /", "time": "Tue, 24 Aug 2021 16:31:34 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
+{"message": "GET /content?company=Company 4", "time": "Tue, 24 Aug 2021 16:31:45 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
+{"message": "Click Company 4", "time": "Tue, 24 Aug 2021 16:31:44 GMT", "ip": "59.99.188.190", "country": "India", "city": "Kozhikode", "session": "jWT5-rAt3QcUpiz1b-5Y_gnj-oQNIFNm"}
